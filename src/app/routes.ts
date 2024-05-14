@@ -1,4 +1,5 @@
 import {
+  CircleUserRound,
   Code,
   LucideIcon,
   MessageSquare,
@@ -45,9 +46,21 @@ export const codeDetails: ITools = {
   placeholder: 'Uma função com JS para definir se o mês tem 31 dias'
 }
 
+export const adaBotDetails: ITools = {
+  label: 'Ada Lovelace - chatbot',
+  icon: CircleUserRound,
+  href: '/ada-chatbot',
+  color: 'text-purple-700',
+  bgColor: 'bg-purple-700/10',
+  description: 'Converse com o chatbot da Ada Lovelace',
+  empty: 'Nenhuma conversa iniciada',
+  placeholder: 'Pergunte algo sobre a minha vida'
+}
+
 export const tools: IRoutes[] = [
   { ...conversationDetails },
-  { ...codeDetails }
+  { ...codeDetails },
+  { ...adaBotDetails }
 ];
 
 export const routes: IRoutes[] = [
