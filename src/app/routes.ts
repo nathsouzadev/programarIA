@@ -47,6 +47,7 @@ export const codeDetails: ITools = {
 
 export const tools: IRoutes[] = [
   { ...conversationDetails },
+  { ...codeDetails }
 ];
 
 export const routes: IRoutes[] = [

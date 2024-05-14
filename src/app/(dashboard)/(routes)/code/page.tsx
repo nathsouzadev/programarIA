@@ -12,14 +12,14 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Empty } from '@/src/components/empty';
 import { Loader } from '@/src/components/loader';
-import { conversationDetails } from '@/src/app/routes';
-import { MessageSquareOff } from 'lucide-react';
+import { codeDetails } from '@/src/app/routes';
+import { Code } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { getAiResponse } from '@/src/service/getAiResponse';
-import { Message } from '@/src/models/message.model';
 import { Threads } from '@/src/components/threads';
+import { Message } from '@/src/models/message.model';
 
-const ConversationPage = () => {
+const CodePage = () => {
   const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([]);
 
@@ -38,7 +38,7 @@ const ConversationPage = () => {
         content: values.prompt,
       };
 
-      const data = await getAiResponse(values.prompt, '/api/conversation');
+      const data = await getAiResponse(values.prompt, '/api/code');
 
       setMessages((current) => [
         ...current,
@@ -57,11 +57,11 @@ const ConversationPage = () => {
   return (
     <div>
       <Heading
-        title={conversationDetails.label}
-        description={conversationDetails.description}
-        icon={conversationDetails.icon}
-        iconColor={conversationDetails.color}
-        bgColor={conversationDetails.bgColor}
+        title={codeDetails.label}
+        description={codeDetails.description}
+        icon={codeDetails.icon}
+        iconColor={codeDetails.color}
+        bgColor={codeDetails.bgColor}
       />
       <div className='px-4 lg:px-8'>
         <div>
@@ -78,7 +78,7 @@ const ConversationPage = () => {
                       <Input
                         className='border-0 outline-0 focus-visible:ring-0 focus-visible:ring-transparent'
                         disabled={isLoading}
-                        placeholder={conversationDetails.placeholder}
+                        placeholder={codeDetails.placeholder}
                         {...field}
                       />
                     </FormControl>
@@ -101,7 +101,7 @@ const ConversationPage = () => {
             </div>
           )}
           {messages.length === 0 && !isLoading && (
-            <Empty icon={MessageSquareOff} label={conversationDetails.empty} />
+            <Empty icon={Code} label={codeDetails.empty} />
           )}
           <Threads messages={messages} />
         </div>
@@ -110,4 +110,4 @@ const ConversationPage = () => {
   );
 };
 
-export default ConversationPage;
+export default CodePage;
