@@ -2,9 +2,9 @@
 
 Este projeto foi desenvolvido com o intuito de compartilhar conhecimento sobre boas práticas de desenvolvimento, como utilizar o Gemini e a importância de testes automatizados durante o desenvolvimento.
 
-## Getting Started
+## Inicializando o projeto
 
-Provide .env values
+Providencie os valores para o arquivo .env
 
 1 - Providencie a api key do [Gemini](https://ai.google.dev/)
 
@@ -31,6 +31,6 @@ Acesse [http://localhost:3000](http://localhost:3000) no seu browser para ver o 
 
 - Converse com a Ada Lovelace em formato de chatbot
 
-## Stay in touch
+## Entre em contato
 
-- Author - [Nathally Souza](https://linkedin.com/in/nathsouza)
+- Desenvolvedora - [Nathally Souza](https://linkedin.com/in/nathsouza)
