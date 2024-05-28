@@ -10,7 +10,7 @@ on:
 
 env:
   ## Sets environment variable
-  GEMINI_API_KEY='gemini-api-key'
+  GEMINI_API_KEY: 'gemini-api-key'
 
 jobs:
   lint:
@@ -30,7 +30,7 @@ jobs:
 
         # ESLint and Prettier must be in `package.json`
       - name: Install dependencies
-        run: npm istall
+        run: npm install
 
       - name: Run lint
         run: npm run lint
@@ -51,7 +51,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm istall
+        run: npm install
 
       - name: Run lint
-        run: npm run lint
+        run: npm run test
