@@ -4,36 +4,10 @@ import { useContactModal } from '@/src/hooks/use-pro-model';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/dialog';
 import { Card } from './ui/card';
 import { cn } from '@/src/lib/utils';
-import { Github, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { content } from '@/src/app/content';
+import { socials } from '../app/routes';
 
-const socials = [
-  {
-    label: 'linkedin',
-    icon: Linkedin,
-    href: 'https://www.linkedin.com/in/nathsouza/',
-    color: 'text-blue-600',
-  },
-  {
-    label: 'github',
-    icon: Github,
-    href: 'https://github.com/nathsouzadev',
-    color: 'text-white-500',
-  },
-  {
-    label: 'instagram',
-    icon: Instagram,
-    href: 'https://instagram.com/nathsouzadev',
-    color: 'text-violet-500',
-  },
-  {
-    label: 'twitter',
-    icon: Twitter,
-    href: 'https://twitter.com/nathsouzadev',
-    color: 'text-blue-300',
-  }
-]
 
 export const ContactModal = () => {
   const contactModal = useContactModal();
