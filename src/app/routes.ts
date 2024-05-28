@@ -2,6 +2,10 @@ import {
   Code,
   LucideIcon,
   MessageSquare,
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
 } from 'lucide-react';
 
 interface ITools {
@@ -11,7 +15,7 @@ interface ITools {
   color: string;
   bgColor: string;
   description: string;
-  empty: string
+  empty: string;
   placeholder: string;
 }
 
@@ -31,8 +35,8 @@ export const conversationDetails: ITools = {
   bgColor: 'bg-orange-500/10',
   description: 'Nosso modelo de conversa',
   empty: 'Nenhuma conversa iniciada',
-  placeholder: 'Como calcular o raio de um círculo?'
-}
+  placeholder: 'Como calcular o raio de um círculo?',
+};
 
 export const codeDetails: ITools = {
   label: 'Gerador de código',
@@ -42,13 +46,39 @@ export const codeDetails: ITools = {
   bgColor: 'bg-green-700/10',
   description: 'Gere códigos usando um texto descritivo',
   empty: 'Nenhum código gerado',
-  placeholder: 'Uma função com JS para definir se o mês tem 31 dias'
-}
+  placeholder: 'Uma função com JS para definir se o mês tem 31 dias',
+};
 
 export const tools: IRoutes[] = [
   { ...conversationDetails },
+  { ...codeDetails },
 ];
 
-export const routes: IRoutes[] = [
-  ...tools
+export const routes: IRoutes[] = [...tools];
+
+export const socials = [
+  {
+    label: 'linkedin',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/lumamontes/',
+    color: 'text-blue-600',
+  },
+  {
+    label: 'github',
+    icon: Github,
+    href: 'https://github.com/lumamontes',
+    color: 'text-white-500',
+  },
+  {
+    label: 'instagram',
+    icon: Instagram,
+    href: 'https://instagram.com/l.gmontes',
+    color: 'text-violet-500',
+  },
+  {
+    label: 'twitter',
+    icon: Twitter,
+    href: 'https://twitter.com/monnlu1',
+    color: 'text-blue-300',
+  },
 ];

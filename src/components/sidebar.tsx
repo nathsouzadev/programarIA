@@ -15,7 +15,7 @@ const Sidebar = () => {
   const pathName = usePathname();
 
   return (
-    <div className='space-y-4 py-4 flex flex-col h-full bg-[#5e4a95] text-white'>
+    <div className='space-y-4 py-4 flex flex-col h-full bg-[#43366e] text-white'>
       <div className='px-3 py-2 flex-1'>
         <Link href='/' className='flex items-center pl-3 mb-14'>
           <div className='relative w-8 h-8 mr-4'>
@@ -31,7 +31,7 @@ const Sidebar = () => {
               <Link
                 href={route.href}
                 key={route.href}
-                className={cn('text-sm group flex p-3 w-full justify-start ifont-medium cursor-pointer hover:text-white rounded-lg transition border rounded border-black/40', pathName === route.href ? 'bg-white/10' : 'text-zinc-400')}
+                className={cn('text-sm group flex p-3 w-full justify-start ifont-medium cursor-pointer hover:text-white rounded-lg transition border rounded border-[#43366e]/50', pathName === route.href ? 'bg-white/10' : 'text-zinc-400')}
               >
                 <div className='flex items-center flex-1'>
                   <route.icon className={cn('w-5 h-5 mr-3', route.color)} />
