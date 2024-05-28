@@ -2,6 +2,10 @@ import {
   Code,
   LucideIcon,
   MessageSquare,
+  Github, 
+  Instagram, 
+  Linkedin, 
+  Twitter
 } from 'lucide-react';
 
 interface ITools {
@@ -47,8 +51,36 @@ export const codeDetails: ITools = {
 
 export const tools: IRoutes[] = [
   { ...conversationDetails },
+  { ...codeDetails }
 ];
 
 export const routes: IRoutes[] = [
   ...tools
 ];
+
+export const socials = [
+  {
+    label: 'linkedin',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/nathsouza/',
+    color: 'text-blue-600',
+  },
+  {
+    label: 'github',
+    icon: Github,
+    href: 'https://github.com/nathsouzadev',
+    color: 'text-white-500',
+  },
+  {
+    label: 'instagram',
+    icon: Instagram,
+    href: 'https://instagram.com/nathsouzadev',
+    color: 'text-violet-500',
+  },
+  {
+    label: 'twitter',
+    icon: Twitter,
+    href: 'https://twitter.com/nathsouzadev',
+    color: 'text-blue-300',
+  }
+]
