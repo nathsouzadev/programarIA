@@ -22,6 +22,8 @@ import { UserAvatar } from '@/src/components/user-avatar';
 import { BotAvatar } from '@/src/components/bot-avatar';
 import { cn } from '@/src/lib/utils';
 
+console.log('test')
+
 const CodePage = () => {
   const router = useRouter();
   const [messages, setMessages] = useState<Message[]>([]);
