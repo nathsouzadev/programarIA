@@ -30,9 +30,9 @@ export const ContactModal = () => {
                 <Link href={social.href} target='_blank' className={cn('flex w-full cursor-pointer rounded-lg')}>
                   <div className='p-2 w-ft rounded-md flex items-center flex-1'>
                     <social.icon className={cn('w-6 h-6 mr-2', social.color)} />
-                      <div className='font-semibold text-sm'>
-                        {social.label}
-                      </div>
+                    <div className='font-semibold text-sm'>
+                      {social.label}
+                    </div>
                   </div>
                 </Link>
               </Card>
