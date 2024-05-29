@@ -6,6 +6,7 @@ import {
   Instagram,
   Linkedin,
   Twitter,
+  CircleUserRound,
 } from 'lucide-react';
 
 interface ITools {
@@ -49,9 +50,21 @@ export const codeDetails: ITools = {
   placeholder: 'Uma função com JS para definir se o mês tem 31 dias',
 };
 
+export const adaDetails: ITools = {
+  label: 'Converse com Ada Lovelace',
+  icon: CircleUserRound,
+  href: '/ada',
+  color: 'text-pink-700',
+  bgColor: 'bg-pink-700/10',
+  description: 'Converse com o chatbot de Ada Lovelace',
+  empty: 'Nenhuma conversa iniciada',
+  placeholder: 'Quem é você?',
+};
+
 export const tools: IRoutes[] = [
   { ...conversationDetails },
   { ...codeDetails },
+  { ...adaDetails}
 ];
 
 export const routes: IRoutes[] = [...tools];
